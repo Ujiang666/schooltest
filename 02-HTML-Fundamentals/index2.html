@@ -1,0 +1,105 @@
+<!--如何插入图片与链接
+其中链接分为两类 一种是指向我们网站内的其他页面 另一种是指向我们网站之外的链接
+需要用到URL（统一资源定位器） 通俗来讲就是我们常说的网址 作用是精确指向互联网上某个资源的位置-->
+<!DOCTYPE html>
+
+<html lang="en">
+  <!--这里的lang属性是<html>标签（文档的根元素）的一个全局属性 用于指定文档内容的主要语言 这里的en是语言代码
+  可以帮助搜索引擎判断页面的主要语言从而精准推送 可以根据语言属性优化显示效果等等-->
+  <meta charset="UTF-8" />
+  <!--meta元素(metadate)是元数据的意思 用于描述数据的数据 即它是一种用于描述网页的附加信息的标签 像是说明书
+  这里是在告诉浏览器这个网页使用 UTF-8 编码格式来解析文字内容-->
+  <head>
+    <title>网络的基本语言:HTML-2.0</title>
+  </head>
+
+  <body>
+    <h1>📘 The Code Magazine</h1>
+    <!--要指向内部网站 就是把原先的url替换成文件名称-->
+    <a href="blog.html">博客</a>
+    <a href="#">我不指向任何地方QwQ</a>
+    <a href="#">Flexbox</a>
+    <a href="#">CSS设计</a>
+
+    <h2>The Basic Language of the Web: HTML</h2>
+    <img
+      src="laura-jones.jpg"
+      alt="Headshot of Laura Jones"
+      width="50"
+      height="50"
+    />
+    <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+    <img
+      src="post-img.jpg"
+      alt="HTML code on a screen"
+      width="500"
+      height="200"
+    />
+    <!--html标签分为容器标签和空标签 img是空标签 不需要包含任何内容 仅通过自身属性完成功能
+    src（属性）即为sourse用于指定图片的路径 src前有空格且路径值必须用引号
+    本地图片使用相对路径 网络图片使用绝对路径
+    alt属性 全称alternative 用于指定图片无法加载时显示的替代文本 允许搜索引擎了解图片内容
+    width和height可以改变图片大小 省略一个没关系 会根据长宽比自动补全-->
+
+    <p>
+      All modern websites and web applications are built using three
+      <em>fundamental</em>
+      technologies: HTML, CSS and JavaScript. These are the languages of the
+      web.
+    </p>
+
+    <p>
+      In this post, let's focus on HTML. We will learn what HTML is all about,
+      and why you too should learn it.
+    </p>
+
+    <h3>What is HTML?</h3>
+    <p>
+      HTML stands for <strong>H</strong>yper<strong>T</strong>ext
+      <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup language
+      that web developers use to structure and describe the content of a webpage
+      (not a programming language).
+    </p>
+    <p>
+      HTML consists of elements that describe different types of content:
+      paragraphs, links, headings, images, video, etc. Web browsers understand
+      HTML and render HTML code as websites.
+    </p>
+    <p>In HTML, each element is made up of 3 parts:</p>
+    <ol>
+      <li>The opening tag</li>
+      <li>The closing tag</li>
+      <li>The actual element</li>
+    </ol>
+
+    <!--指向外部网站的url-->
+    <p>
+      You can learn more at the
+      <a
+        href="https://blog.csdn.net/weixin_42372837/article/details/144006847"
+        target="_blank"
+        >CSDN HTML 高赞学习指南</a
+      >
+      <!--target="_blank" 的作用就是让链接在新窗口打开，避免用户离开当前浏览的页面
+      没有这句话的话 就是在当前页面打开新链接-->
+    </p>
+    <!--a元素（anchor）即为锚点元素 href属性里面写url a元素容器内的内容是显示在浏览器里面的链接名称-->
+
+    <h3>Why should you learn HTML?</h3>
+    <p>
+      There are countless reasons for learning the fundamental language of the
+      web. Here are 5 of them:
+    </p>
+    <ul>
+      <li>To be able to use the fundamental web dev language</li>
+      <li>
+        To hand-craft beautiful websites instead of relying on tools like
+        Worpress or Wix
+      </li>
+      <li>To build web applications</li>
+      <li>To impress friends</li>
+      <li>To have fun 😃</li>
+    </ul>
+    <p>Hopefully you learned something new here. See you next time!</p>
+  </body>
+</html>

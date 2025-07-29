@@ -1,0 +1,144 @@
+<!--结构 aka语义化标签
+在html5之前div元素 相当于一个容器 来对代码进行区别意义的划分 
+但是在html5之后 只有当我们不想对这个容器赋予特别意义的时候才会使用他-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <meta charset="UTF-8" />
+
+  <head>
+    <title>网络的基本语言:HTML-3.0</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>📘 The Code Magazine</h1>
+
+      <nav>
+        <a href="blog.html">博客</a>
+        <a href="#">我不指向任何地方QwQ</a>
+        <a href="#">Flexbox</a>
+        <a href="#">CSS设计</a>
+      </nav>
+      <!--nav元素是导航的意思（navigation）-->
+    </header>
+    <!--header元素 作用是定义网页或某个区块的头部区域-->
+
+    <article>
+      <header>
+        <h2>The Basic Language of the Web: HTML</h2>
+        <img
+          src="img/laura-jones.jpg"
+          alt="Headshot of Laura Jones"
+          width="50"
+          height="50"
+        />
+        <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+        <img
+          src="img/post-img.jpg"
+          alt="HTML code on a screen"
+          width="500"
+          height="200"
+        />
+      </header>
+      <!--这种划分具有主观性-->
+
+      <p>
+        All modern websites and web applications are built using three
+        <em>fundamental</em>
+        technologies: HTML, CSS and JavaScript. These are the languages of the
+        web.
+      </p>
+
+      <p>
+        In this post, let's focus on HTML. We will learn what HTML is all about,
+        and why you too should learn it.
+      </p>
+
+      <h3>What is HTML?</h3>
+      <p>
+        HTML stands for <strong>H</strong>yper<strong>T</strong>ext
+        <strong>M</strong>arkup <strong>L</strong>anguage. It's a markup
+        language that web developers use to structure and describe the content
+        of a webpage (not a programming language).
+      </p>
+      <p>
+        HTML consists of elements that describe different types of content:
+        paragraphs, links, headings, images, video, etc. Web browsers understand
+        HTML and render HTML code as websites.
+      </p>
+      <p>In HTML, each element is made up of 3 parts:</p>
+      <ol>
+        <li>The opening tag</li>
+        <li>The closing tag</li>
+        <li>The actual element</li>
+      </ol>
+
+      <p>
+        You can learn more at the
+        <a
+          href="https://blog.csdn.net/weixin_42372837/article/details/144006847"
+          target="_blank"
+          >CSDN HTML 高赞学习指南</a
+        >
+      </p>
+
+      <h3>Why should you learn HTML?</h3>
+      <p>
+        There are countless reasons for learning the fundamental language of the
+        web. Here are 5 of them:
+      </p>
+      <ul>
+        <li>To be able to use the fundamental web dev language</li>
+        <li>
+          To hand-craft beautiful websites instead of relying on tools like
+          Worpress or Wix
+        </li>
+        <li>To build web applications</li>
+        <li>To impress friends</li>
+        <li>To have fun 😃</li>
+      </ul>
+      <p>Hopefully you learned something new here. See you next time!</p>
+    </article>
+    <!--article用于定义页面中独立的 完整的 可单独存在的内容块 相当于一篇文章 帖子 评论或者是独立的信息单元-->
+
+    <aside>
+      <h4>Related posts</h4>
+      <ul>
+        <li>
+          <img
+            src="img/related-1.jpg"
+            alt="一个男的在敲键盘"
+            width="75"
+            height="75"
+          />
+          <a href="#">How to Learn Web Development</a>
+          <p><strong>By Jonas Schmedtman</strong></p>
+        </li>
+
+        <li>
+          <img src="img/related-2.jpg" alt="一道闪电" width="75" height="75" />
+          <a href="#">To Unknown Powers of CSS</a>
+          <p><strong>By Jim Dillon</strong></p>
+        </li>
+
+        <li>
+          <img
+            src="img/related-3.jpg"
+            alt="一大段代码"
+            width="75"
+            height="75"
+          />
+          <a href="#">Why JavaScript is Awesome</a>
+          <p><strong>By Matilda</strong></p>
+        </li>
+      </ul>
+    </aside>
+    <!--aside元素用于文档里面的一些次要信息 补充信息-->
+
+    <footer>Coperight &copy; 2027 by The Code Magazine</footer>
+    <!--footer元素是页脚
+    &copy;是html里面的一个实体-->
+  </body>
+</html>
