@@ -4,5 +4,5 @@
 我上传的文档里面基本上就是Jonas的代码 但是打了很多注释 算是上课笔记 这样不用切软件方便一点 接下来学css
 话说这个readme怎么才能写的好看一点 我之后研究下QwQ
 8.9这个入很会摸鱼了。考出了驾照 看了一个教怎么写markdown的博客让我来试试  
-#<font color=DarkRed>这就是设计~~</font>  
+# <font color=DarkRed>这就是设计~~</font>  
 🤡
