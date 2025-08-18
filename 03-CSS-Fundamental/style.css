@@ -1,12 +1,53 @@
-/*这是一个列表选择器*/
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  font-family: sans-serif;
+/*通用选择器 这样就重置了边距和填充*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
   color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad;
+}
+
+.container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto; /*或者是margin：0 auto
+  自动计算 让两边余量是一样的 所以就居中了*/
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  /*盒子模型
+  padding:20px;
+  padding-left:40px;
+  padding-right: 40px;
+  下面这个20px代表的是上下的填充 40px代表的是左右的填充*/
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 80px;
+}
+
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding: 50px 50px;
+  margin-bottom: 60px;
+  width: 500px;
 }
 
 h1,
@@ -20,110 +61,88 @@ h1 {
   text-transform: uppercase;
   font-style: italic;
 }
-/*如果里面有多个h1 就会选择所有
-font-size属性后面跟长度 有很多单位 这里用像素单位px（英文pixel）
-font-famliy：字体
-text-transform:文本转换 这里的uppercase是大写
-font-style:风格 这里的italic是斜体*/
+
 h2 {
   font-size: 40px;
+  margin-bottom: 30px;
 }
+
 h3 {
   font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
+
 h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
 }
-/*text-align是文本对齐属性 center就是让他在文本中央*/
+
 p {
   font-size: 22px;
   line-height: 1.5;
+  margin-bottom: 15px;
 }
-/*line-height行间距=1.5 是指行间距是字体高度的1.5倍*/
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
 li {
   font-size: 20px;
+  margin-bottom: 10px;
 }
-/*后代选择器 选择footer元素中的子元素p
-footer p {
-  font-size: 16px;
+
+li:last-child {
+  margin-bottom: 0;
 }
-嵌套的后代选择器
-article header p {
-  font-style: italic;
-}
-id选择器
-与class类选择器不同的地方在于 id选择器不允许多次使用同一个id*/
+
 #author {
   font-style: italic;
   font-size: 18px;
 }
+
 #copyright {
   font-size: 16px;
 }
-/*类选择器*/
+
 .related-authors {
   font-size: 18px;
   font-weight: bold;
 }
+
 .related {
   list-style: none;
 }
 
-/*在css里面有两种方式来表示颜色
-一种是RGB模型
-可以通过rgb（0，255，255）或者带透明度通道的rgba（0，255，255，0.3）
-不过通常不用这么写 直接copy或者从css的选择器里面选择即可
-另一种是十六进制表示 从0到ff（255）表示
-#00ffff每两位代表一个通道 #0ff 速记
-ps：灰度 比如#444
-
-下面是给标题加背景颜色*/
-.main-header {
-  background-color: #f7f7f7;
-}
-aside {
-  background-color: #f7f7f7;
-  /*border: 5px solid #1098ad; 5像素宽的实线蓝色全包边框*/
-  border-top: 5px solid #1098ad;
-  border-bottom: 5px solid #1098ad;
-}
-body {
-  /*background-color: orangered;*/
-}
-
-/*伪类*/
 li:first-child {
   font-weight: bold;
 }
+
 li:last-child {
   font-style: italic;
 }
-/*li:nth-child(odd) {
-  所有奇数元素都会变成红色 或者是写次数 如果是偶数的话 写even
-  color: red;
-}
-下面这个不生效 first-child只会匹配父元素里面的第一个直接子元素
-article p:first-child{
-  color:red;
-}
-下面这些方法 只有当链接有href属性时才会生效
-a:link { 未访问的链接  }
-a:visited {  已访问的链接  }
-a:hover {  鼠标悬停时的链接 }
-a:active {  鼠标点击瞬间的链接 }*/
+
 a:link {
   color: #1098ad;
   text-decoration: none;
 }
+
 a:hover {
   color: orangered;
   font-weight: bold;
   text-decoration: underline orangered;
 }
-/*hover的background属性会被active继承*/
+
 a:active {
   background-color: black;
   font-style: italic;
+}
+
+.post-img {
+  width: 100%;
+  height: auto; /*高度自动缩放*/
 }
