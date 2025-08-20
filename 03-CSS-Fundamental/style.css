@@ -8,6 +8,7 @@ body {
   color: #444;
   font-family: sans-serif;
   border-top: 10px solid #1098ad;
+  position: relative;
 }
 
 .container {
@@ -31,6 +32,10 @@ body {
 
 nav {
   font-size: 18px;
+}
+
+nav a:link {
+  margin: 5px;
 }
 
 article {
@@ -62,9 +67,33 @@ h1 {
   font-style: italic;
 }
 
+/*伪元素 就是html里面不存在这个元素 伪类就是一个特定的状态？*/
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+/*兄弟选择器 + 选择这个元素下面的元素
+h3 + p::first-line {
+  color: red;
+}*/
+
+h2::after {
+  content: "TOP"; /*一定要有内容属性 内容可以为空*/
+  background-color: #ffe70e;
+  color: #444;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -15px;
+  right: -25px;
+}
+
 h2 {
   font-size: 40px;
   margin-bottom: 30px;
+  position: relative;
 }
 
 h3 {
@@ -145,4 +174,13 @@ a:active {
 .post-img {
   width: 100%;
   height: auto; /*高度自动缩放*/
+}
+/*绝对定位 通常需要根据父元素来设置 与父元素的相对位置*/
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
 }
